@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Score from "./components/score";
+import Rules from "./components/rules";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,14 +18,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={
-          inter.className +
-          " flex min-h-screen flex-col items-center justify-center"
-        }
-      >
-        <Score />
-        {children}
+      <body className="relative flex h-full w-full items-center justify-center">
+        <div
+          className={
+            inter.className +
+            " flex min-h-screen w-full max-w-[1340px] flex-col items-center justify-center sm:w-fit"
+          }
+        >
+          <Score />
+          {children}
+          <div className="bottom-0 right-0 sm:absolute">
+            <Rules />
+          </div>
+        </div>
       </body>
     </html>
   );

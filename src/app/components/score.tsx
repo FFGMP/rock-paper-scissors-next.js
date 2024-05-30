@@ -2,7 +2,7 @@ export default function Score() {
   const title = "ROCK PAPER SCISSORS";
   const score = 12;
   return (
-    <div className="flex w-3/4 max-w-[900px] items-center justify-between rounded-md border-2 border-neutral-100 border-opacity-30 p-3">
+    <div className="flex w-full items-center justify-between rounded-md border-2 border-neutral-100 border-opacity-30 p-3 sm:w-[40rem]">
       <div className="pl-3 sm:pl-10">
         {/*Split each word from title to get title with break lines*/}
         {title.split(" ").map((word, k) => (

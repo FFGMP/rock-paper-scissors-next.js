@@ -1,17 +1,17 @@
 import OptionCircle from "./components/optionCircle";
 import { placeHolderCircle } from "./types/types";
+import Image from "next/image";
 
 export default function Home() {
   const gameOptions: Array<placeHolderCircle> = [
-    { name: "Paper", icon: "icon-paper.svg", color: "blue" },
-    { name: "Scissors", icon: "icon-scissors.svg", color: "yellow" },
-    { name: "Rock", icon: "icon-rock.svg", color: "red" },
+    { name: "Paper", icon: "icon-paper.svg", color: "rgb(29 78 216)" },
+    { name: "Scissors", icon: "icon-scissors.svg", color: "rgb(161 98 7)" },
+    { name: "Rock", icon: "icon-rock.svg", color: "rgb(185 28 28)" },
   ];
 
   return (
-    <main>
-      <div className="mt-20 grid grid-cols-2 grid-rows-2 gap-x-16 gap-y-7">
-        {/*<OptionCircle placeholder={{ icon: "String", color: "string" }} />*/}
+    <main className="h-full w-fit">
+      <div className="relative mt-9 grid w-full grid-cols-2 grid-rows-2 gap-x-12 sm:mt-20 sm:gap-x-16 sm:gap-y-7">
         {gameOptions.map((v, k) => {
           return (
             <OptionCircle
@@ -25,6 +25,15 @@ export default function Home() {
             />
           );
         })}
+        <div className="absolute -z-10 flex h-full w-full items-center justify-center">
+          <Image
+            className="h-4/6 w-4/6"
+            width={55}
+            height={55}
+            src={"bg-triangle.svg"}
+            alt={"Triangle background"}
+          />
+        </div>
       </div>
     </main>
   );
