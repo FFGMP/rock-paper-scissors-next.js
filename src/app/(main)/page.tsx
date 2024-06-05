@@ -1,5 +1,5 @@
-import OptionCircle from "./components/optionCircle";
-import { placeHolderCircle } from "./types/types";
+import OptionCircle from "../components/optionCircle";
+import { placeHolderCircle } from "../types/types";
 import Image from "next/image";
 
 export default function Home() {
