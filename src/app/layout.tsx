@@ -28,6 +28,7 @@ export default function RootLayout({
           <Score />
           {children}
           <div className="bottom-0 right-0 sm:absolute">
+            {/* Rules button. need to see what can i change to make this in a better way */}
             <Rules />
           </div>
         </div>
