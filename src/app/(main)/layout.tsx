@@ -11,7 +11,7 @@ export default function MainLayout({
       <body className="relative flex h-full w-full items-center justify-center">
         <div
           className={
-            " flex min-h-screen w-full max-w-[1340px] flex-col items-center justify-center sm:w-fit"
+            " flex min-h-screen w-full max-w-[1340px] flex-col items-center justify-between py-10 sm:w-fit sm:justify-start sm:pt-20"
           }
         >
           <Score />

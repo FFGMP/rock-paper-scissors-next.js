@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { placeHolderCircle } from "../types/types";
+import Link from "next/link";
 
 export default function OptionCircle({
   placeholder,
@@ -9,12 +10,13 @@ export default function OptionCircle({
   classname?: string;
 }) {
   return (
-    <div
+    <Link
       className={
         " flex h-40 w-40 items-center justify-center justify-self-center rounded-full shadow-[inset_0px_-8px_0px_0px_rgba(0,0,0,0.35)] sm:h-52 sm:w-52 " +
         classname
       }
       style={{ backgroundColor: placeholder.color }}
+      href={"/" + placeholder.name}
     >
       <div
         className={
@@ -29,6 +31,6 @@ export default function OptionCircle({
           alt={placeholder.name}
         />
       </div>
-    </div>
+    </Link>
   );
 }

@@ -15,14 +15,10 @@ export default async function BattleLayout({
   children: React.ReactNode;
   params: { battleOption: string };
 }) {
-  const Array = await generateStaticParams();
-  Array.forEach((v) => {
-    console.log(v.battleOption);
-  });
-  return (
-    <>
-      <h1>{battleOption}</h1>
-      {children}
-    </>
-  );
+  const arrayWithBattleOptions = await generateStaticParams();
+  // Check if the battleOption is valid
+  arrayWithBattleOptions.some((option) => option.battleOption === battleOption)
+    ? null
+    : notFound();
+  return <>{children}</>;
 }

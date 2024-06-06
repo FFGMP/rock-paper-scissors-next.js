@@ -2,13 +2,13 @@ import OptionCircle from "../components/optionCircle";
 import { placeHolderCircle } from "../types/types";
 import Image from "next/image";
 
-export default function Home() {
-  const gameOptions: Array<placeHolderCircle> = [
-    { name: "Paper", icon: "icon-paper.svg", color: "rgb(29 78 216)" },
-    { name: "Scissors", icon: "icon-scissors.svg", color: "rgb(161 98 7)" },
-    { name: "Rock", icon: "icon-rock.svg", color: "rgb(185 28 28)" },
-  ];
+export const gameOptions: Array<placeHolderCircle> = [
+  { name: "paper", icon: "icon-paper.svg", color: "rgb(29 78 216)" },
+  { name: "scissors", icon: "icon-scissors.svg", color: "rgb(161 98 7)" },
+  { name: "rock", icon: "icon-rock.svg", color: "rgb(185 28 28)" },
+];
 
+export default function Home() {
   return (
     <main className="h-full w-fit">
       <div className="relative mt-9 grid w-full grid-cols-2 grid-rows-2 gap-x-12 sm:mt-20 sm:gap-x-16 sm:gap-y-7">
