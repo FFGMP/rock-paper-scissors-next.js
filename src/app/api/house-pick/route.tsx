@@ -1,4 +1,5 @@
-import { gameOptions } from "@/app/(main)/page";
+import { responseType } from "@/app/types/types";
+import { gameOptions } from "@/app/utils/gameOptions";
 
 export async function POST(req: Request) {
   // Initialize the result variable
@@ -25,14 +26,14 @@ export async function POST(req: Request) {
 
   // Compare the player's choice with the house's choice to detect a tie
   if (housePickName === playerPick?.name) {
-    result = 2;
+    result = 3;
   }
 
   // Check if the house wins or the player wins
   if (outcomes[housePickName].winsAgainst === playerPick?.name) {
-    result = 0;
-  } else if (outcomes[housePickName].losesAgainst === playerPick?.name) {
     result = 1;
+  } else if (outcomes[housePickName].losesAgainst === playerPick?.name) {
+    result = 2;
   }
 
   // Return the house's choice, the player's choice, and the result
@@ -44,9 +45,3 @@ export async function POST(req: Request) {
 
   return new Response(JSON.stringify(response));
 }
-
-export type responseType = {
-  playerPick?: string;
-  housePickName: string;
-  result?: number;
-};

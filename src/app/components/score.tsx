@@ -1,6 +1,10 @@
+"use client";
+
+import { useStoreGameValues } from "../store/storeGameValues";
+
 export default function Score() {
   const title = "ROCK PAPER SCISSORS";
-  const score = 0;
+  const score = useStoreGameValues((state) => state.playerScore);
   return (
     <div className="flex w-5/6 items-center justify-between rounded-md border-2 border-neutral-100 border-opacity-30 p-3 sm:w-[40rem]">
       <div className="pl-3 sm:pl-10">
