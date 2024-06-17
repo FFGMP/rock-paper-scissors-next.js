@@ -9,7 +9,7 @@ export default function MainLayout({
   return (
     <div
       className={
-        " flex min-h-screen w-full max-w-[1340px] flex-col items-center justify-between py-10 sm:w-fit sm:justify-start sm:pt-20"
+        " flex min-h-screen w-full max-w-[1340px] flex-col items-center justify-between py-10 sm:justify-start sm:pt-20"
       }
     >
       <Score />

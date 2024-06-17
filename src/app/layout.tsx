@@ -19,7 +19,8 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={
-          inter + " relative flex h-full w-full items-center justify-center"
+          inter.className +
+          " relative flex h-full w-full items-center justify-center"
         }
       >
         <Provider>{children}</Provider>

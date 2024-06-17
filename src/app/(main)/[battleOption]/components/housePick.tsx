@@ -5,6 +5,7 @@ import { responseType } from "@/app/types/types";
 import { gameOptions } from "@/app/utils/gameOptions";
 import { useStoreGameValues } from "@/app/store/storeGameValues";
 import { useEffect } from "react";
+import SkeletonCircleBattle from "./skeletonCircleBattle";
 
 // Function to manage the score
 function manageScore(
@@ -58,7 +59,7 @@ export default function HousePick({
     }
   }, [data, increasePlayerScore, reducePlayerScore, setResult]);
 
-  if (isLoading) return <p>Loading...</p>;
+  if (isLoading) return <SkeletonCircleBattle />;
   if (error || !data?.housePickName) return <p>Error</p>;
 
   const playerChoice = gameOptions.find(
