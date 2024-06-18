@@ -16,6 +16,10 @@ This project is a showcase of a web application designed for playing the classic
 
 ![LightTheme](./ReadmeImages/image-2.png)
 
+## Credits
+
+[Frontend Mentor](https://www.frontendmentor.io/)
+
 ## Creation Process
 
 Technologies used: Next.js, TailwindCSS, Zod, TanStack Query(React Query)
