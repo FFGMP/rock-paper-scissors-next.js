@@ -8,11 +8,11 @@ This project is a showcase of a web application designed for playing the classic
 
 ![Home](./ReadmeImages/image-0.png)
 
-### User selected the option and it is waiting for the CPU
+### User has selected the option and is now waiting for the CPU's choice
 
 ![UserSelection](./ReadmeImages/image-1.png)
 
-### Unfurtunely the user lost cause the CPU chose scissors 😔
+### Unfortunately, the user lost because the CPU chose scissors 😔
 
 ![LightTheme](./ReadmeImages/image-2.png)
 
