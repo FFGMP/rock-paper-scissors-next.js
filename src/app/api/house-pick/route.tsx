@@ -1,6 +1,5 @@
 import { responseType } from "@/app/types/types";
 import { gameOptions } from "@/app/utils/gameOptions";
-import { resolve } from "path";
 
 export async function POST(req: Request) {
   // Initialize the result variable
@@ -44,10 +43,14 @@ export async function POST(req: Request) {
     result: result,
   };
 
-  // Return the response after 3 seconds
+  //Debug purposes
+  /*
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(new Response(JSON.stringify(response)));
-    }, 0);
+    }, 300);
   });
+*/
+
+  return new Response(JSON.stringify(response));
 }

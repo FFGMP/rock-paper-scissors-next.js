@@ -3,8 +3,9 @@
 import OptionCircleBattle from "./components/optionCircleBattle";
 import HousePick from "./components/housePick";
 import { gameOptions } from "@/app/utils/gameOptions";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import OutcomeDisplay from "./components/outcomeDisplay";
+import PulseWave from "./components/pulseWave";
 
 export default function Game({
   params: { battleOption },
@@ -24,8 +25,9 @@ export default function Game({
         <h1 className="text-base font-bold tracking-wide sm:text-lg">
           YOU PICKED
         </h1>
-        <div>
+        <div className="relative">
           {playerChoice && <OptionCircleBattle placeholder={playerChoice} />}
+          <PulseWave result={result} playerPick={true} />
         </div>
       </div>
       <div className="order-3 mt-11 flex h-[78px] w-full justify-center px-2 sm:h-fit sm:w-fit lg:order-2 lg:mt-0">
@@ -35,8 +37,9 @@ export default function Game({
         <h1 className="text-base font-bold tracking-wide sm:text-lg">
           THE HOUSE PICKED
         </h1>
-        <div className="">
+        <div className="relative">
           <HousePick setResult={setResult} battleOption={battleOption} />
+          <PulseWave result={result} playerPick={false} />
         </div>
       </div>
     </div>
