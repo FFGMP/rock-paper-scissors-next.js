@@ -1,3 +1,38 @@
+## rock-paper-scissors-next.js
+
+This project is a showcase of a web application designed for playing the classic game of Rock, Paper, Scissors. The application provides a user-friendly interface and robust functionality to facilitate seamless gameplay. It is highly performant, ensuring efficient and real-time game updates.
+
+## Showcase
+
+### Start page, here you can select the option to face the CPU
+
+![Home](./ReadmeImages/image-0.png)
+
+### User selected the option and it is waiting for the CPU
+
+![UserSelection](./ReadmeImages/image-1.png)
+
+### Unfurtunely the user lost cause the CPU chose scissors 😔
+
+![LightTheme](./ReadmeImages/image-2.png)
+
+## Creation Process
+
+Technologies used: Next.js, TailwindCSS, Zod, TanStack Query(React Query)
+
+This project is a web-based implementation of the classic game Rock, Paper, Scissors, built using the dynamic and adaptable Next.js framework. The primary aim of this venture was to create a robust and high-performance game platform, facilitating users to play Rock, Paper, Scissors effortlessly online.
+
+Throughout the development phase, the design aspect of the game was given significant attention, alongside a strong emphasis on functionality and performance. The goal was to ensure the gameplay was not only swift but also reliable and intuitive for users.
+
+With a focus on speed and efficiency, the project strives to deliver an exceptional user experience. Users can swiftly start a new game and play Rock, Paper, Scissors.
+
+## Key Features
+
+- ✔️ Intuitive Gameplay: Facilitates users to play Rock, Paper, Scissors effortlessly online against a CPU opponent.
+- ✔️ Dynamic UI: Built with Next.js and TailwindCSS, the game interface is robust, adaptable, and user-friendly.
+- ✔️ Real-time Updates: The game state updates in real-time, providing a seamless gaming experience.
+- ✔️ CPU Opponent: The game features a CPU opponent.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
